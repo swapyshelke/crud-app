@@ -18,17 +18,17 @@ const password_db = process.env.DB_PASSWORD;
 
 
 // midlewares
+app.use(bodyParser.json({extended: true})); 
 app.use(cors());
 app.use("/", Router);
-app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
-  res.json("hello from server");
+  res.json("🙋hello from server 🙋‍♂️");
 });
 
 connection(username_db, password_db);
 
 app.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`);
+  console.log(`👂👂👂listening on port ${PORT} 🙉🙉🙉`);
 });
